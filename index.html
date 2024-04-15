@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuta aí!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Escuta aí!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="playerLink">Player</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="quemSomosLink">Quem Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="pedirMusicaLink">Peça sua Música</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Page -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Playlists -->
+      <div class="col-lg-4">
+        <h2>Playlists</h2>
+        <ul id="playlists">
+          <!-- Playlists serão adicionadas dinamicamente aqui -->
+        </ul>
+      </div>
+      <!-- Player -->
+      <div class="col-lg-8">
+        <h2>Player de Música</h2>
+        <audio id="audioPlayer" controls>
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <div class="controls mt-3">
+          <button id="prevBtn" class="btn btn-primary mr-2">Anterior</button>
+          <button id="playPauseBtn" class="btn btn-primary mr-2">Play</button>
+          <button id="nextBtn" class="btn btn-primary mr-2">Próximo</button>
+          <button id="randomBtn" class="btn btn-primary">Aleatório</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Quem Somos -->
+  <div class="modal fade" id="quemSomosModal" tabindex="-1" role="dialog" aria-labelledby="quemSomosModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="quemSomosModalLabel">Quem Somos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Breve informação sobre a empresa Escuta aí! LTDA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Pedir Música -->
+  <div class="modal fade" id="pedirMusicaModal" tabindex="-1" role="dialog" aria-labelledby="pedirMusicaModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pedirMusicaModalLabel">Peça sua Música</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="pedirMusicaForm">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="musica">Nome da Música</label>
+              <input type="text" class="form-control" id="musica" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
